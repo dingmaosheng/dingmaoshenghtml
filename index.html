@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼎茂盛 - 家庭园艺专用鱼蛋白肥</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2e7d32;
+            letter-spacing: 2px;
+        }
+
+        .brand-sub {
+            font-size: 14px;
+            color: #555;
+            border-left: 1px solid #ddd;
+            padding-left: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #555;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2e7d32;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://s41.ax1x.com/2026/09/27/pn3fsds.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero .hero-manufacturer {
+            font-size: 18px;
+            color: #ffc107;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .douyin-btn {
+            display: inline-block;
+            background-color: #fe2c55;
+            color: #fff;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(254, 44, 85, 0.4);
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .douyin-btn:hover {
+            background-color: #e6254b;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(254, 44, 85, 0.6);
+        }
+
+        .douyin-tip {
+            font-size: 14px;
+            color: #ddd;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            font-weight: 500;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: #2e7d32;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #e53935;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h3 {
+            color: #2e7d32;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .effects {
+            background-color: #f1f8e9;
+        }
+
+        .effects-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .effects-table th, .effects-table td {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .effects-table th {
+            background-color: #2e7d32;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .effects-table td:first-child {
+            font-weight: bold;
+            color: #e53935;
+            font-size: 18px;
+        }
+
+        .effects-table tr:hover {
+            background-color: #fafafa;
+        }
+
+        .tech {
+            background-color: #263238;
+            color: #fff;
+        }
+
+        .tech .section-title {
+            color: #81c784;
+        }
+
+        .tech-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .tech-content p {
+            margin-bottom: 20px;
+            font-size: 18px;
+            color: #cfd8dc;
+        }
+
+        .tech-content ul {
+            list-style: none;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .tech-content li {
+            margin-bottom: 15px;
+            font-size: 16px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .tech-content li::before {
+            content: '✔';
+            color: #81c784;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .usage {
+            background-color: #fff;
+        }
+
+        .usage-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #f1f8e9;
+            border: 2px dashed #2e7d32;
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(46, 125, 50, 0.1);
+        }
+
+        .usage-card h3 {
+            font-size: 24px;
+            color: #2e7d32;
+            margin-bottom: 20px;
+        }
+
+        .ratio {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #e53935;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .ratio span {
+            background: #fff;
+            padding: 10px 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .ratio .colon {
+            font-size: 32px;
+            color: #333;
+            padding: 0;
+            background: none;
+            box-shadow: none;
+        }
+
+        .usage-tips {
+            font-size: 16px;
+            color: #555;
+            line-height: 2;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .usage-tips li {
+            list-style: none;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .usage-tips li::before {
+            content: '💧';
+            position: absolute;
+            left: 0;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 550px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.02);
+        }
+
+        footer {
+            background-color: #2e7d32;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        footer h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        footer p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .authorized {
+            display: inline-block;
+            background-color: #ffc107;
+            color: #000;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            padding: 8px 25px;
+            border-radius: 30px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .manufacturer {
+            font-size: 15px;
+            color: #e8f5e9;
+            margin-bottom: 20px;
+            opacity: 0.95;
+            letter-spacing: 1px;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            font-size: 14px;
+            opacity: 0.6;
+        }
+
+        /* 弹窗遮罩层与弹窗样式 */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #fff;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .modal-title {
+            text-align: center;
+            font-size: 24px;
+            color: #2e7d32;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #e0e0e0;
+        }
+
+        /* 复用底部的样式到弹窗里 */
+        .modal-content .usage-card {
+            margin: 0;
+            padding: 20px;
+            border: none;
+            box-shadow: none;
+            background: transparent;
+        }
+
+        .modal-content .ratio {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .modal-content .ratio span {
+            padding: 8px 15px;
+        }
+
+        .modal-content .usage-tips {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .modal-actions {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 20px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #2e7d32;
+        }
+
+        .jump-btn {
+            display: inline-block;
+            background-color: #ccc;
+            color: #fff;
+            padding: 12px 40px;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: not-allowed;
+            transition: all 0.3s;
+        }
+
+        .jump-btn.enabled {
+            background-color: #fe2c55;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(254, 44, 85, 0.4);
+        }
+
+        .jump-btn.enabled:hover {
+            background-color: #e6254b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(254, 44, 85, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero .hero-manufacturer { font-size: 14px; margin-bottom: 15px; }
+            .hero p { font-size: 16px; }
+            .nav-links { display: none; }
+            .brand-sub { display: none; }
+            .effects-table th, .effects-table td { padding: 10px; font-size: 14px; }
+            .effects-table td:first-child { font-size: 16px; }
+            .ratio { font-size: 22px; gap: 10px; }
+            .ratio span { padding: 8px 15px; }
+            .modal-content { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">鼎茂盛</div>
+                <div class="brand-sub">生产：中鼎特金秦皇岛科技公司</div>
+            </div>
+            <div class="nav-links">
+                <a href="#features">产品优势</a>
+                <a href="#effects">适用效果</a>
+                <a href="#tech">核心工艺</a>
+                <a href="#usage">使用说明</a>
+                <a href="#gallery">产品图片</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>鼎茂盛 · 鱼蛋白氨基酸水溶肥</h1>
+        <div class="hero-manufacturer">生产：中鼎特金秦皇岛科技公司</div>
+        <p>200天生物发酵，家庭园艺专用。促花壮苗，营养全面！<br>花艳长盛 · 叶绿茎翠 · 生根壮苗</p>
+        
+        <!-- 修改为 button，阻止默认跳转，改为弹出弹窗 -->
+        <button id="douyinBtn" class="douyin-btn">点击跳转抖音小店</button>
+        <div class="douyin-tip">（仅限手机端打开，请扫码或复制链接至手机访问）</div>
+    </div>
+
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">为什么选择鼎茂盛？</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>🌸 花艳长盛</h3>
+                    <p>富含天然生物刺激素，促进花芽分化，花期更长，花色更艳丽。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌿 叶绿茎翠</h3>
+                    <p>快速补充氨基酸营养，叶片肥厚油绿，茎秆粗壮挺拔。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌱 生根壮苗</h3>
+                    <p>活菌代谢物促进根系爆发式生长，提高移栽成活率。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🛡️ 营养全面</h3>
+                    <p>富含鱼蛋白、氨基酸及微量元素，防黄叶、防落果。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="effects" class="effects">
+        <div class="container">
+            <h2 class="section-title">施用后实际效果</h2>
+            <table class="effects-table">
+                <thead>
+                    <tr>
+                        <th>作物分类</th>
+                        <th>核心功效</th>
+                        <th>具体表现</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🍎 果蔬类</td>
+                        <td>增甜、着色、品质高</td>
+                        <td>口感大幅提升，果面光洁，提前上市，耐储运。</td>
+                    </tr>
+                    <tr>
+                        <td>🥬 大棚蔬菜</td>
+                        <td>抗寒、生根、提早上市</td>
+                        <td>低温环境下根系依然活跃，缓苗快，抢早市卖高价。</td>
+                    </tr>
+                    <tr>
+                        <td>🌾 大田作物</td>
+                        <td>抗逆、增产、省化肥</td>
+                        <td>增强抗旱抗涝能力，减少化肥使用量，增产增收。</td>
+                    </tr>
+                    <tr>
+                        <td>🍊 果树</td>
+                        <td>根系旺、果品好、树势强</td>
+                        <td>解决大小年问题，果实均匀，树体健壮少生病。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="tech" class="tech">
+        <div class="container">
+            <h2 class="section-title">核心工艺解密</h2>
+            <div class="tech-content">
+                <p><strong>全鱼发酵 · 低温萃取 · 活菌转化</strong></p>
+                <p>鼎茂盛拒绝化学勾兑，采用独特全鱼配合发酵工艺：</p>
+                <ul>
+                    <li><strong>低温发酵（全程室温）</strong>：不添加强酸强碱，最大限度保留天然活性物质。</li>
+                    <li><strong>复合菌群转化</strong>：利用多种芽孢杆菌、放线菌等，将鱼骨、虾蟹壳中的营养物质转化释放。</li>
+                    <li><strong>天然刺激素积累</strong>：活菌生长过程中积累大量天然生物刺激素和多功能菌类代谢物质。</li>
+                    <li><strong>极易吸收</strong>：小分子氨基酸态，植物直接吸收利用，不烧根，不污染土壤。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="usage" class="usage">
+        <div class="container">
+            <h2 class="section-title">使用说明</h2>
+            <div class="usage-card">
+                <h3>浓缩液 · 使用前需稀释</h3>
+                <div class="ratio">
+                    <span>每 2ml 肥料</span>
+                    <span class="colon">:</span>
+                    <span>2L 水</span>
+                </div>
+                <ul class="usage-tips">
+                    <li>取 2ml 本品浓缩液，兑入 2L 清水中，并导入瓶中，摇晃均匀（具体用量看植物，只要遵守比例即可）。</li>
+                    <li>稀释后可直接用于浇灌根部或喷洒叶面。</li>
+                    <li>请勿与其他强酸强碱性农药混用。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">产品图片</h2>
+            <div class="gallery">
+                <img src="https://s41.ax1x.com/2026/09/27/pn3frZj.jpg" alt="鼎茂盛产品多瓶展示">
+                <img src="https://s41.ax1x.com/2026/09/27/pn3fsds.jpg" alt="鼎茂盛产品与鲜花特写">
+            </div>
+        </div>
+    </section>
+
+    <footer id="buy">
+        <h2>仅需 19.9 元包邮</h2>
+        <p>家庭园艺专用，含氨基酸水溶肥。全国包邮，欢迎选购！</p>
+        <div class="authorized">官方授权推广</div>
+        <div class="manufacturer">生产：中鼎特金秦皇岛科技公司</div>
+        <div class="copyright">
+            © 2026 鼎茂盛 版权所有
+        </div>
+    </footer>
+
+    <!-- 使用说明弹窗 -->
+    <div id="usageModal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 class="modal-title">使用说明</h2>
+            
+            <!-- 复用使用说明卡片样式 -->
+            <div class="usage-card">
+                <h3>浓缩液 · 使用前需稀释</h3>
+                <div class="ratio">
+                    <span>每 2ml 肥料</span>
+                    <span class="colon">:</span>
+                    <span>2L 水</span>
+                </div>
+                <ul class="usage-tips">
+                    <li>取 2ml 本品浓缩液，兑入 2L 清水中，并导入瓶中，摇晃均匀（具体用量看植物，只要遵守比例即可）。</li>
+                    <li>稀释后可直接用于浇灌根部或喷洒叶面。</li>
+                    <li>请勿与其他强酸强碱性农药混用。</li>
+                </ul>
+            </div>
+
+            <div class="modal-actions">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="agreeCheck">
+                    我已阅读并同意使用说明
+                </label>
+                <br>
+                <button id="confirmJumpBtn" class="jump-btn" disabled>确认并跳转</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 获取DOM元素
+        const douyinBtn = document.getElementById('douyinBtn');
+        const usageModal = document.getElementById('usageModal');
+        const agreeCheck = document.getElementById('agreeCheck');
+        const confirmJumpBtn = document.getElementById('confirmJumpBtn');
+
+        // 点击跳转抖音按钮 -> 显示弹窗
+        douyinBtn.addEventListener('click', function() {
+            usageModal.style.display = 'flex';
+            // 重置勾选状态和按钮状态
+            agreeCheck.checked = false;
+            confirmJumpBtn.disabled = true;
+            confirmJumpBtn.classList.remove('enabled');
+        });
+
+        // 勾选协议 -> 激活按钮
+        agreeCheck.addEventListener('change', function() {
+            if (this.checked) {
+                confirmJumpBtn.disabled = false;
+                confirmJumpBtn.classList.add('enabled');
+            } else {
+                confirmJumpBtn.disabled = true;
+                confirmJumpBtn.classList.remove('enabled');
+            }
+        });
+
+        // 点击确认跳转 -> 1毫秒后关闭弹窗并跳转
+        confirmJumpBtn.addEventListener('click', function() {
+            // 用户要求：点击后1毫秒自动关闭
+            setTimeout(function() {
+                usageModal.style.display = 'none';
+                // 执行跳转（在新窗口打开）
+                window.open('https://i.douyin.com/5NUD3sZxdzc/', '_blank');
+            }, 1);
+        });
+
+        // 点击遮罩层空白处关闭弹窗（可选功能，提升体验）
+        usageModal.addEventListener('click', function(e) {
+            if (e.target === usageModal) {
+                usageModal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
